@@ -74,4 +74,21 @@ class MainTest {
         assertEquals(expected[1], result[700], EPS);
         assertEquals(expected[2], result[1000], EPS);
     }
+
+
+    @Test
+    void testSum() {
+        double[] arr = {1.0, -2.1, 7.5, 4.3, 11.6};
+        double expected = 22.3;
+        double result = main.sum(arr);
+        assertEquals(expected, result, EPS);
+    }
+
+    @Test
+    void tetsMin() {
+        double[] arr = {1.0, -2.1, 7.5, 4.3, 11.6};
+        int expected = 1;
+        int result = main.numMin(arr);
+        assertEquals(expected, result);
+    }
 }

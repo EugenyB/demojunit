@@ -42,4 +42,19 @@ public class Main {
                 .map(this::f)
                 .toArray();
     }
+
+    public double sum(double[] arr) {
+        return Arrays.stream(arr)
+                .reduce(0, (a,b)->a+b);
+    }
+
+    public int numMin(double[] arr) {
+        int res = 0;
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i]<arr[res]) {
+                res = i;
+            }
+        }
+        return res;
+    }
 }
